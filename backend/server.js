@@ -15,7 +15,7 @@ app.use(
   cors()
 );
 
-const port = process.env.port || 4000
+const port = 6002
 
 
 
