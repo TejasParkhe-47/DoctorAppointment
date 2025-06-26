@@ -25,7 +25,11 @@ app.use(express.json());
 
 
 app.use(
-  cors()
+  cors({
+    origin: `${process.env.Frontend_URL}`,
+    methods:["GET","POST","DELETE","PUT"],
+    credentials: true, // if you are using cookies or auth
+  })
 );
 
 
