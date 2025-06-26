@@ -25,10 +25,7 @@ app.use(express.json());
 
 
 app.use(
-  cors({
-    origin: `${process.env.Frontend_URL}`,
-    credentials: true, // if you are using cookies or auth
-  })
+  cors()
 );
 
 
