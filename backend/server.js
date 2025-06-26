@@ -12,11 +12,7 @@ import userRouter from "./routes/userRoute.js"
 const app = express()
 
 app.use(
-  cors({
-    origin: `https://doctor-appointment-frontend-amber.vercel.app`,
-    methods:["GET","POST","DELETE","PUT"],
-    credentials: true, // if you are using cookies or auth
-  })
+  cors()
 );
 
 const port = process.env.port || 4000
