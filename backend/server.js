@@ -11,7 +11,17 @@ import userRouter from "./routes/userRoute.js"
 
 const app = express()
 
+app.use(
+  cors({
+    origin: `https://doctor-appointment-frontend-amber.vercel.app`,
+    methods:["GET","POST","DELETE","PUT"],
+    credentials: true, // if you are using cookies or auth
+  })
+);
+
 const port = process.env.port || 4000
+
+
 
 connectdb();//5
 connectCloudinary();  //6
@@ -24,13 +34,7 @@ app.use(express.json());
 
 
 
-app.use(
-  cors({
-    origin: `https://doctor-appointment-frontend-amber.vercel.app`,
-    methods:["GET","POST","DELETE","PUT"],
-    credentials: true, // if you are using cookies or auth
-  })
-);
+
 
 
 
