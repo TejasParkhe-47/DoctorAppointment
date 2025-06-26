@@ -19,7 +19,24 @@ connectCloudinary();  //6
 //middlewares
 
 app.use(express.json());
-app.use(cors());
+
+
+
+
+
+app.use(
+  cors({
+    origin: `${process.env.Frontend_URL}`,
+    credentials: true, // if you are using cookies or auth
+  })
+);
+
+
+
+app.listen(5000, () => {
+  console.log('Server running');
+});
+
 
 
 //api endpoint
