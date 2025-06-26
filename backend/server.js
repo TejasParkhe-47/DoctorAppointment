@@ -26,7 +26,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: `${process.env.FRONTEND_URL}`,
+    origin: `https://doctor-appointment-frontend-amber.vercel.app`,
     methods:["GET","POST","DELETE","PUT"],
     credentials: true, // if you are using cookies or auth
   })
